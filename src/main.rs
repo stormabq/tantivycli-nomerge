@@ -8,7 +8,6 @@ extern crate bincode;
 extern crate byteorder;
 extern crate chan;
 extern crate env_logger;
-extern crate futures;
 extern crate iron;
 extern crate mount;
 extern crate persistent;
@@ -117,11 +116,6 @@ fn main() {
                     .help("Number of times to repeat the benchmark.")
                     .default_value("1"))
         )
-        .subcommand(
-            SubCommand::with_name("merge")
-                .about("Merge all the segments of an index")
-                .arg(index_arg.clone())
-        )
         .get_matches();
 
     let (subcommand, some_options) = cli_options.subcommand();
@@ -131,7 +125,6 @@ fn main() {
         "index" => run_index_cli,
         "serve" => run_serve_cli,
         "search" => run_search_cli,
-        "merge" => run_merge_cli,
         "bench" => run_bench_cli,
         _ => panic!("Subcommand {} is unknown", subcommand),
     };

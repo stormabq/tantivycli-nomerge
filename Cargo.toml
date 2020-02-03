@@ -1,6 +1,6 @@
 [package]
 name = "tantivy-cli"
-version = "0.10.0"
+version = "0.11.3"
 authors = ["Paul Masurel <paul.masurel@gmail.com>"]
 
 description = """Command line interface for Tantivy, a search engine library."""
@@ -29,9 +29,8 @@ chan = "0.1"
 bincode = "0.4"
 byteorder = "0.5"
 log = "0.3"
-futures = "0.1"
 env_logger = "0.3"
-tantivy = "0.10"
+tantivy = "0.11"
 
 [[bin]]
 name = "tantivy"
