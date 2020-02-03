@@ -1,9 +1,9 @@
 [package]
-name = "tantivy-cli"
+name = "tcnom"
 version = "0.11.3"
 authors = ["Paul Masurel <paul.masurel@gmail.com>"]
 
-description = """Command line interface for Tantivy, a search engine library."""
+description = """Tantivy Client No Merge."""
 documentation = "https://github.com/tantivy-search/tantivy-cli"
 homepage = "https://github.com/tantivy-search/tantivy-cli"
 repository = "https://github.com/tantivy-search/tantivy-cli"
@@ -33,7 +33,7 @@ env_logger = "0.3"
 tantivy = "0.11"
 
 [[bin]]
-name = "tantivy"
+name = "tcnom"
 path = "src/main.rs"
 
 
