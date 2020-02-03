@@ -177,7 +177,7 @@ fn ask_add_field(schema_builder: &mut SchemaBuilder) {
         Type::Str => {
             ask_add_field_text(&field_name, schema_builder);
         }
-        Type::U64 | Type::Date | Type::I64 => {
+        Type::U64 | Type::Date | Type::F64 | Type::I64 => {
             // Type::U64 | Type::F64 | Type::Date | Type::I64 => {
             ask_add_num_field_with_options(&field_name, field_type, schema_builder);
         }
